@@ -32,6 +32,35 @@
 
     <script>
 
+      let list = document.querySelector("ul")
+      let input = document.querySelector("input")
+      let button = document.querySelector("button")
+
+      button.addEventListener('click', () => {
+        let inputValue = input.value
+        input.value = "" //works
+
+
+        let listItem = document.createElement("li")
+        let spanItem = document.createElement("span")
+        let buttonItem = document.createElement("button")
+
+        listItem.appendChild(spanItem)
+        listItem.appendChild(buttonItem)
+
+        spanItem.textContent = inputValue  
+        buttonItem.textContent = "Delete" 
+
+        list.appendChild(listItem)
+
+        buttonItem.addEventListener('click', () => { //works
+          list.removeChild(listItem)
+        });
+
+        input.focus()
+
+      });
+
     </script>
   </body>
 </html>
