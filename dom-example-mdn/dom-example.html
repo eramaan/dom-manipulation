@@ -10,5 +10,15 @@
         <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
         <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
       </section>
+      <!--https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#active_learning_basic_dom_manipulation-->
+      <script>
+        // select an element and store a reference to it inside a variable
+        const link = document.querySelector("a");
+
+        //change the text inside the link by updating the value of the Node.textContent property
+        link.textContent = "Mozilla Developer Network";
+        //change the URL the link is pointing to
+        link.href = "https://developer.mozilla.org";
+      </script>
   </body>
 </html>
